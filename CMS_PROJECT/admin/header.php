@@ -1,13 +1,17 @@
+<?php ob_start(); ?>
 <?php require'../connection.php' ?>
 <?php require'functions.php' ?>
-<?php ob_start(); ?>
+
 <?php session_start(); ?>
 
 <?php 
 
-    if(!isset($_SESSION['user_role']))
+    if(isset($_SESSION['user_role']))
     {
-        header("Location ./index.php");
+       
+    }
+    else{
+        header("Location: ../index.php");
     }
 
 ?>
@@ -24,7 +28,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Life of Rhythms-Admin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +45,14 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
 </head>
 
 <body>

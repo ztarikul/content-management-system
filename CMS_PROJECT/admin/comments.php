@@ -60,7 +60,7 @@
 
     </div>
     <!-- /#page-wrapper -->
-
+    <?php require 'footer.php'; ?>
 </div>
 <!-- /#wrapper -->
 

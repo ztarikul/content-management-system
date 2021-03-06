@@ -33,8 +33,12 @@
 
                     <?php 
                    if(isset($_GET['edit'])){
+                    if(isset($_SESSION['user_role'])){
+                        if($_SESSION['user_role'] == 'admin'){
                        $cat_id = $_GET['edit'];
                        require "update_category.php";
+                        }
+                    }
                    }
                    ?>
 

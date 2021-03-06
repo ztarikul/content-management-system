@@ -7,11 +7,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">CMS ADMIN</a>
+                <a class="navbar-brand" href="index.php">Life of Rhythms ADMIN</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
+            <!-- <li><a href="../index.php">Users Online: <?php //echo users_online(); ?></a></li> -->
+            <li><a href="../index.php">Users Online:<span class="usersonline"></span> </a></li>
             <li><a href="../index.php">Home Site</a></li>
+
+
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
                     <ul class="dropdown-menu message-dropdown">
@@ -102,7 +107,20 @@
 
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
+<?php 
+if(isset($_SESSION['username'])){
+    echo $_SESSION['username'];
+}
+
+
+?>
+
+                   
+                     
+                     
+                     
+                     <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
